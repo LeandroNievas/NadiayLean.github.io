@@ -1,0 +1,314 @@
+/* General */
+
+@import url('https://googleapis.com');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Reseteamos márgenes y tipografía base */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 35px;
+    text-align: center;
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
+}
+
+#botonArriba {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    background-color: #e9d7d7;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: opacity 0.3s;
+}
+
+#botonArriba:hover {
+    background-color: #ecb8b8;
+}
+
+li a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* Header */
+
+/* Fondo del encabezado */
+.header {
+    padding: 1rem 2rem;
+    background-color: #faefef;
+}
+
+/* Se aplica solo en pantallas menores a 768px (móviles) */
+@media (max-width: 767.98px) {
+    .navbar-collapse {
+        /* Posicionamiento absoluto para superponer el menú */
+        position: absolute;
+        top: 100%; /* Se despliega justo debajo del botón */
+        left: 0;
+        right: 0;
+        
+        /* Capa superior para que nada quede por encima */
+        z-index: 9999; 
+        
+        /* Fondo visible (puedes cambiar #ffffff por el color que quieras) */
+        background-color: #f9cdcd; 
+        
+        /* Espaciado interno opcional para que no quede pegado a los bordes */
+        padding: 15px;
+        
+        /* Sombra suave opcional para dar efecto de flotado */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    }
+    
+    /* Asegura que el contenedor padre mantenga la referencia relativa */
+    .navbar .container-fluid {
+        position: relative;
+    }
+}
+
+.navbar-toggler {
+    background-color: #f9cdcd;
+}
+
+/* Body */
+
+/* Contenedor flotante de los controles */
+        .contenedor-reproductor {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 5px 15px 5px 5px;
+            border-radius: 40px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            transition: all 0.3s ease;
+        }
+
+        /* Botón flotante de reproducción */
+        #btn-musica {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        #btn-musica:hover {
+            transform: scale(1.05);
+        }
+
+        /* Selector de volumen (Slider) */
+        #control-volumen {
+            width: 0px; /* Oculto por defecto */
+            opacity: 0;
+            cursor: pointer;
+            accent-color: #ff5722; /* Color de la barra en navegadores modernos */
+            transition: width 0.3s ease, opacity 0.3s ease;
+        }
+
+        /* Muestra la barra de volumen al pasar el mouse sobre el contenedor */
+        .contenedor-reproductor:hover #control-volumen,
+        #control-volumen:focus {
+            width: 80px;
+            opacity: 1;
+        }
+
+/* Nos casamos */
+
+.inicio {
+    background-color: #faefef;
+    text-align: center;
+    padding: 2rem;
+    margin: auto;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.nadia-lean {
+    font-size: 100px;
+    font-family: "Great Vibes", cursive;
+}
+
+.p-inicio {
+    font-size: 20px;
+}
+
+/* Cuenta regresiva */
+
+.cuenta {
+    padding: 2rem;
+}
+
+/* Estilos del contenedor para centrarlo */
+
+.contenedor-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilos del botón */
+
+.mi-boton {
+    background-color: #e9d7d7;
+    color: #000000;
+    
+    /* Forzamos el tamaño interno y de la tipografía */
+    padding: 12px 24px !important; 
+    font-size: 18px !important; 
+    
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+/* Efecto al pasar el ratón por encima */
+
+.mi-boton:hover {
+    background-color: #ecb8b8; /* Azul más oscuro */
+    transform: translateY(-2px); /* Pequeño salto hacia arriba */
+}
+
+.boton {
+    text-align: center;
+    list-style: none;
+    margin-top: 4rem;
+}
+
+/* Nuestra historia */
+
+.historia {
+    background-color: #faefef;
+}
+
+/* Confirmar asistencia */
+
+.asistencia {
+    background-color: #faefef;
+}
+
+/* Parte final */
+
+.texto-final {
+    text-align: center;
+}
+
+/* Dresscode */
+
+.invitados {
+    background-color: #faefef;
+}
+
+.corbata {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+}
+
+/* Boton de cbu */
+
+dialog {
+            border: none;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+            width: 340px;
+            
+            /* Estado inicial oculto */
+            opacity: 0;
+            transform: translateY(20px);
+            
+            /* Transición suave de entrada y salida */
+            transition: 
+                opacity 0.3s ease-out, 
+                transform 0.3s ease-out, 
+                display 0.3s ease-out allow-discrete;
+        }
+
+        /* Estado cuando el modal se abre */
+        dialog[open] {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Estilo de inicio para navegadores modernos */
+        @starting-style {
+            dialog[open] {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+        }
+
+        /* Fondo oscuro detrás del modal */
+        dialog::backdrop {
+            background-color: rgba(0, 0, 0, 0);
+            transition: 
+                background-color 0.3s ease-out, 
+                display 0.3s ease-out allow-discrete;
+        }
+
+        dialog[open]::backdrop {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        @starting-style {
+            dialog[open]::backdrop {
+                background-color: rgba(0, 0, 0, 0);
+            }
+        }
+
+/* Footer */
+
+footer {
+    background-color: #f9cdcd;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
